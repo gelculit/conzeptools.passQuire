@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+:root {
+	--primary-color: #2b72bf; /* wmoc blue */
+	--secondary-color: #dadce0;
+	--wmoc-blue:#2b72bf;
+	--padding:2rem 9%;
+	--paddingShort:2rem 25%;
+	
+	--back-layer:rgba(0,0,0,.4);
+	
+	
+	--box-shadow2: .5rem .5rem .7rem rgba(0, 0, 0, .3);
+	
+	--shadowColor: #dadce0;
+    --green:#16a085;
+    --black:#444;
+	--darkturquoise: #00CED1;
+    --light-color:#777;
+	--white:#fff;
+	--red:#FF0000;
+	--yellow: #FFFF00;
+    --box-shadow:.5rem .5rem 0 rgba(22, 160, 133, .2);
+	/*--box-shadow2: .5rem .5rem .7rem rgba(0, 0, 0, .3);*/
+    --text-shadow:.4rem .4rem 0 rgba(0, 0, 0, .2);
+    --border:.2rem solid var(--green);
+	
+	--borderBlack:.1rem solid var(--black);
+	--borderGreen:.1rem solid var(--green);
+	--borderDarkturquoise:.1rem solid var(--darkturquoise);
+	--borderRed:.1rem solid var(--red);
+	--borderYellow:.1rem solid var(--yellow);
+	
+	
+	/* add this if padding is preferred on both sides both sides  */
+	--paddingVar: 2rem 9%;
+	
+	
+	
+	
+	
+		/* center the logo horizontally 
+	top: 50%;
+	transform: translate(0, -50%);
+	*/
+
+	
+}
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    /*text-transform: capitalize;*/
+    transition: all .2s ease-out;
+    text-decoration: none;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+
+section{
+    padding:2rem 9%;
+}
+
+
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .5rem;
+    padding-left: 1rem;
+    /*border:var(--borderBlack);*/
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow2);
+    /*color:var(--black);*/
+    cursor: pointer;
+    font-size: 1.7rem;
+    background: #fff;
+}
+
+
+.btn span{
+    padding:.7rem 1rem;
+    border-radius: .5rem;
+    /*background: var(--black);*/
+    color:#fff;
+    margin-left: .5rem;
+}
+
+
+/*** black button  ***/
+.btnBlack {
+	border: var(--borderBlack);
+	color:var(--black);
+}
+
+.btnBlack span {
+	background: var(--black);
+}
+
+.btnBlack:hover{
+    background: var(--black);
+    color:#fff;
+}
+
+.btnBlack:hover span{
+    color: var(--black);
+    background:#fff;
+    /*margin-left: 1rem;*/
+}
+
+
+/*** red button  ***/
+.btnRed {
+	border: var(--borderRed);
+	color:var(--red);
+}
+
+.btnRed span {
+	background: var(--red);
+}
+
+.btnRed:hover{
+    background: var(--red);
+    color:#fff;
+}
+
+.btnRed:hover span{
+    color: var(--red);
+    background:#fff;
+    /*margin-left: 1rem;*/
+}
+
+/*** darkturquoise button  ***/
+.btnDarkturquoise {
+	border: var(--borderDarkturquoise);
+	color:var(--green);
+}
+
+.btnDarkturquoise span {
+	background: var(--darkturquoise);
+}
+
+.btnDarkturquoise:hover{
+    background: var(--darkturquoise);
+    color:#fff;
+}
+
+.btnDarkturquoise:hover span{
+    color: var(--darkturquoise);
+    background:#fff;
+    /*margin-left: 1rem;*/
+}
+
+/*** green button  ***/
+.btnGreen {
+	border: var(--borderGreen);
+	color:var(--green);
+}
+
+.btnGreen span {
+	background: var(--green);
+}
+
+.btnGreen:hover{
+    background: var(--green);
+    color:#fff;
+}
+
+.btnGreen:hover span{
+    color: var(--green);
+    background:#fff;
+    /*margin-left: 1rem;*/
+}
+
+
+
+/* main container // controls the side paddings */
+.mainFormContainer {
+	width: 100vw;
+	padding: var(--padding);
+	
+	
+}
+
+
+
+.formWrapper {
+	
+	display: flex;
+	flex-direction: row;
+	gap: 2rem;
+	justify-content: space-evenly;
+
+}
+
+
+.formWrapper-row {
+	width: 100vw; /* this makes a world of difference in determining placement of input containers */
+	margin-top: 1rem;
+	padding: 2rem 3rem 0 3rem;
+	/*border: 1px solid var(--secondary-color);*/ /* border of input field wrapper */
+	/*box-shadow:.5rem .5rem 0 rgba(22, 160, 133, .2);*/
+	box-shadow: 3px 3px 10px var(--secondary-color);
+	
+	border-radius: 8px;
+	overflow: hidden; 
+	background-color: white;
+	
+	
+}
+
+/* used in reviewAllEntry.html */
+
+/*** for placing a border top ***/
+.form-borderTop {
+	border-top: 10px solid var(--wmoc-blue);
+}
+
+.formWrapper-row .formWrapper-row-entryDetails {
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+}
+
+/* used in reviewAllEntry.html */
+
+
+/* used in index.html */
+.formWrapper-row .formWrapper-row-details {
+	
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	/*gap: 2rem;
+	justify-content: space-between;*/
+	gap: .5rem;
+}
+/* used in index.html */
+
+
+
+.formWrapper-row .form__group {
+	/*width: 30vw;*/
+	flex-grow: 1;
+	
+}
+
+.formWrapper-row h3 {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+
+.formWrapper-row p {
+	font-size: 2rem;
+	padding-bottom: 1rem;
+	padding-right: 2rem;
+	font-weight: bold;
+}
+
+
+/*** TWO-COLUMN form ***/
+.formWrapper-col {
+	width: 50vw; /* this makes a world of difference in determining placement of input containers */
+	margin-top: 1rem;
+	padding: 2rem 3rem 1rem 3rem;
+	/*border: 1px solid var(--secondary-color);*/ /* border of input field wrapper */
+	/*box-shadow:.5rem .5rem 0 rgba(22, 160, 133, .2);*/
+	box-shadow: 3px 3px 10px var(--secondary-color);
+	
+	border-radius: 8px;
+	overflow: hidden; 
+	background-color: white;
+	
+	
+	display: flex;
+	flex-direction: column;
+}
+
+
+.formWrapper-col p {
+	font-size: 2rem;
+	padding-bottom: 1rem;
+	font-weight: bold;
+}
+
+/*** .end/ TWO-COLUMN form ***/
+
+
+

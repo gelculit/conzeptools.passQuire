@@ -1,0 +1,36 @@
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	
+	position: relative;
+	
+	
+}
+
+
+.container .imgBox {
+	width: 45vw;
+	/*background: var(--green);*/
+	
+}
+
+
+.container .imgBox img{
+	width: 100%;
+	object-fit: cover;
+}
+
+.imgHome img {
+	position: absolute;
+	width: 5%;
+	
+	margin-top: 15px;
+	margin-left: 15px;
+	top: 0;
+	left: 0;
+}
+
+

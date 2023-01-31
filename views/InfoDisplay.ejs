@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <title>Information Display</title>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link href="/formStyle.css" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/555ba73a95.js" crossorigin="anonymous"></script>
+        
+    </head>
+    <body>
+	<br><br>
+		<div class="mainFormContainer">
+		
+			<h1><center>Access for: <%= listItems.accessFor %></center></h1>
+			
+			<!-- input form for individual seafarer for scheduling  -->
+			<div class="formWrapper">
+				<div class="formWrapper-row form-borderTop"><!--borderline around fields-->
+				
+					<div class="formWrapper-row-entryDetails">
+				
+					<h3><span style="padding: 1rem;">&#8226;</span>Username: <%= listItems.userName%></h3>
+					<br><br>
+					<h3><span style="padding: 1rem;">&#8226;</span>Email address: <%= listItems.emailAdd %></h3>
+					<br><br>
+					<h3><span style="padding: 1rem;">&#8226;</span>Password: <%= listItems.passWord %></h3>
+					<br><br>
+					</div>
+					
+				</div>		
+					
+			</div>	
+					
+					
+			
+			
+			<br><br>
+			<a href="/indexList/update/<%= listItems._id %>" class="btn btnGreen"> Edit <span class="fa fa-pencil"></span> </a>
+			<a href="#" class="btn btnRed btnClr delete" data-doc="<%= listItems._id %>"> Delete <span class="fas fa-eraser"></span> </a>
+			<a href="/" class="btn btnBlack btnClr"> Home <span class="fas fa-chevron-right"></span> </a>
+				
+							
+			<br><br>
+<!--------------------------------------------------------------------------------------->			
+			
+					
+
+							
+			
+						
+	
+		<br><br><br><br>
+        <footer style="font-size: 2rem;">
+          <p>Copyright &copy; 2022 ConzepTools
+                                
+        	| Designed by <a href="http://www.conzeptools.com" target="_blank"><em>GelCulit Creative Concepts</em></a></p>
+        </footer>
+		
+		<script>
+			const deleteEntry = document.querySelector('a.delete');
+	
+			deleteEntry.addEventListener('click', (e) => {
+				const endpoint = `/indexList/${deleteEntry.dataset.doc}`
+	
+				fetch(endpoint, {
+					method: 'DELETE'
+				})
+				.then((response) => response.json())
+				//.then((data) => console.log(data))
+				.then((data) => window.location.href = data.redirect)
+				.catch((err) => console.log(err))
+			})
+		</script>
+		
+
+    </body>
+</html>

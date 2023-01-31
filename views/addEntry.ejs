@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <title>Add Entry | <%= title %></title>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="/styles.css">
+		<link rel="stylesheet" href="/buttonsAdditionalColors.css">
+		<link rel="stylesheet" href="/inputFields.css" >
+		
+		
+		<script src="https://kit.fontawesome.com/555ba73a95.js" crossorigin="anonymous"></script>
+		
+		
+	</head>
+	<body>
+	
+		<div class="mainForm">
+            <div class="contactForm">
+			
+				<div class="contactHeader">
+					<img class="compLogoAddContact" src="/logo.png">
+					
+				</div>
+				
+				<div class="flow">
+				
+				<!-- INPUT Fields -->
+				<div class="mainWrapper">
+					
+					<!-- input form for individual seafarer for scheduling  -->
+					<form  action="/indexList" method="POST">
+					
+					
+						
+						<div class="form__group">
+							<input type="text" name="accessFor" id="clearField" required>
+							<label for="email">Access For</label>
+						</div> 
+					
+						<div class="form__group">
+							<input type="text" name="emailAdd" id="clearField" required>
+							<label for="email">Email Address</label>
+						</div> 
+								
+						<div class="form__group">
+							<input type="text" name="userName" id="clearField" required>
+							<label for="email">Username</label>
+						</div> 
+						<div class="form__group">
+							<input type="text" name="passWord" id="clearField"  required>
+							<label for="email">Pass Quire</label>
+						</div>
+											
+						<div class="form__group">
+							<input type="text" name="memo" id="clearField" required>
+							<label for="email">Memo</label>
+						</div>
+						
+						<br>
+						
+						<button type="submit" class="btn btnDarkturquoise Clnbtn" name="submit">Add to list <span class="fas fa-chevron-right"></span></button>
+						
+						<button type="submit" class="btn btnBlack Clnbtn btnClr" name="clear">Clear <span class="fas fa-chevron-right"></span></button>
+							
+						<button href="index.html" class="btn btnBrown Clnbtn"> Back <span class="fas fa-chevron-right"></span> </button>
+							
+						
+						
+					
+					</form>
+					
+				</div>		
+				
+				</div>
+			
+				
+			</div>	
+
+		</div>	
+		
+		<script>
+			let btnClear = document.querySelector('.btnClr');
+			let inputs = document.querySelectorAll('input');
+			
+			btnClear.addEventListener('click', (e) => {
+				e.preventDefault();
+				inputs.forEach(input => input.value = '');
+			});
+		
+		</script>
+		
+		
+		<script type="text/javascript"> <!-- Select which picture to upload  -->
+			document.getElementById("fileImg").onchange = function(){
+				document.getElementById("image").src = URL.createObjectURL(fileImg.files[0]); // Preview new image
+				
+				document.getElementById("cancel").style.display = "block";
+				//document.getElementById("confirm").style.display = "block";
+				
+				document.getElementById("upload").style.display = "none";
+			}
+			
+			var userImage = document.getElementById("image").src;
+			document.getElementById("cancel").onclick = function(){
+				document.getElementById('image').src = userImage; //Back to previous image
+				
+				document.getElementById("cancel").style.display = "none";
+				//document.getElementById("confirm").style.display = "none";
+				
+				document.getElementById("upload").style.display = "block";
+			}
+		
+	</script>
+		
+		
+		
+		
+		
+		
+	</body>
+</html>
